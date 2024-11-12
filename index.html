@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Estación Meteorológica</title>
+</head>
+<body>
+    <div class="weather-container">
+        <div class="section temperature">
+            <div class="temp-value">
+                <span class="temperature-number">35</span><span class="decimal">.0</span><span class="degree-symbol">°C</span>
+            </div>
+            <div class="humidity">
+                <span class="humidity-number">59</span><span class="decimal-small">  %</span>
+            </div>
+        </div>
+        <div class="section forecast">
+            <div class="forecast-title">FORECAST</div>
+            <div class="forecast-icon">
+                <img src="sunny.png" alt="Sunny">
+            </div>
+            <div class="section city-selector">
+            	<label for="city-select">City:</label>
+            	<select id="city-select" onchange="changeCity(this.value)">
+                      <option value="Valencia">Valencia</option>
+		      <option value="Manzanera">Manzanera</option>
+                      <option value="Madrid">Madrid</option>
+                      <option value="Barcelona">Barcelona</option>
+                      <option value="Sevilla">Sevilla</option>
+                      <!-- Añade más ciudades según sea necesario -->
+                </select>
+            </div>
+        </div>
+        <div class="section indoor-temperature">
+            <div class="temp-value">
+                <span class="temperature-number">29</span><span class="decimal">.0</span><span class="degree-symbol">°C</span>
+            </div>
+            <div class="humidity">
+                <span class="humidity-number">60</span><span class="decimal-small">  %</span>
+            </div>
+        </div>
+        <div class="section sunrise-sunset">
+            <div class="sunrise">
+                <img src="sunrise.png" alt="Sunrise"><span>  <span class="sunrise-time">08:00</span></span>
+            </div>
+            <br>
+            <div class="sunset">
+                <img src="sunset.png" alt="Sunset"><span>  <span class="sunset-time">20:00</span></span>
+            </div>
+        </div>
+        <div class="section time">
+            <div class="current-time">
+                <span>10:30</span>
+            </div>
+            <div class="date-container">
+                <div class="current-date-day">01/01/2024 - Lunes</div>
+            </div>
+        </div>
+        <div class="section moonphase-pressure">
+            <div class="moonphase-pressure-container">
+                <div class="moonphase">
+                    <img id="moon-phase-image" src="moonphase.png" alt="Moonphase">
+                </div>
+                <div class="pressure-reading">
+                    <span class="pressure-number">1000.00</span> <span class="pressure-unit">mmHg</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
